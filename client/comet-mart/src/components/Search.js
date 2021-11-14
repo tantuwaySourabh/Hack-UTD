@@ -7,17 +7,17 @@ import Sort from './Sort'
 
 
 let items = [
-    {title:"Samsung Galaxy 10", price:"20", image:"bedframe1.jpg", discount:'50'},
-    {title:"Sofa", price:"20", image:"bedframe1.jpg", discount:'20'},
-    {title:"Heater", price:"20", image:"bedframe1.jpg", discount:'20'},
-    {title:"King Size Bed", price:"50", image:"bedframe1.jpg", discount:'20'},
-    {title:"King Size Bed", price:"40", image:"bedframe1.jpg", discount:'70'},
-    {title:"King Size Bed", price:"70", image:"bedframe1.jpg", discount:'30'},
-    {title:"King Size Bed", price:"10", image:"bedframe1.jpg", discount:'40'},
-    {title:"King Size Bed", price:"30", image:"bedframe1.jpg", discount:'60'},
-    {title:"King Size Bed", price:"90", image:"bedframe1.jpg", discount:'20'},
-    {title:"King Size Bed", price:"100", image:"bedframe1.jpg", discount:'10'},
-    {title:"King Size Bed", price:"200", image:"bedframe1.jpg", discount:'30'}
+    {title:"Samsung Galaxy 10", price:20, image:"bedframe1.jpg", discount:50},
+    {title:"Sofa", price:20, image:"bedframe1.jpg", discount:20},
+    {title:"Heater", price:20, image:"bedframe1.jpg", discount:20},
+    {title:"King Size Bed", price:50, image:"bedframe1.jpg", discount:20},
+    {title:"King Size Bed", price:40, image:"bedframe1.jpg", discount:70},
+    {title:"King Size Bed", price:70, image:"bedframe1.jpg", discount:30},
+    {title:"King Size Bed", price:10, image:"bedframe1.jpg", discount:40},
+    {title:"King Size Bed", price:30, image:"bedframe1.jpg", discount:60},
+    {title:"King Size Bed", price:90, image:"bedframe1.jpg", discount:20},
+    {title:"King Size Bed", price:100, image:"bedframe1.jpg", discount:10},
+    {title:"King Size Bed", price:200, image:"bedframe1.jpg", discount:30}
 ]
 
 const Search = () => {
