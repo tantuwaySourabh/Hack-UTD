@@ -4,9 +4,10 @@ import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import {Button} from '@mui/material';
-import{Router} from 'react-router';
 import PropTypes from 'prop-types';
 import Home from './components/Home';
+import Search from './components/Search';
+import AfterLogin from './components/AfterLogin';
 
 function App(){
 
@@ -24,7 +25,7 @@ function App(){
    }, [])
   return (
     <div class="App">
-        <Home></Home>
+      <Search></Search>
     </div>
   );
 
