@@ -20,7 +20,6 @@ const Sort = (props) => {
                     <option value="1">Popularity</option>
                     <option value="2">Price: Low to High</option>
                     <option value="3">Price: High to Low</option>
-                    <option value="4">Rating</option>
                 </select>
             </form>
         </div>

@@ -8,11 +8,17 @@ var collection = db.get('items');
 
 /* GET home page. */
 router.get('/:id', function(req, res, next) {
-  	collection.find({_id:req.params.id}, 
-		function(err,items){
-			if(err) throw err;
-			res.json(items);
-	});
+  	// collection.find({_id:req.params.id}, 
+	// 	function(err,items){
+	// 		if(err) throw err;
+	// 		res.json(items);
+	// });
+
+	collection.find({},function(err, items){
+        if(err) throw err;
+		items = items.filter((item) => item._id == req.params.id);
+        res.json(items);
+    })
 });
 
 

@@ -50,7 +50,7 @@ const SearchResult = (props) => {
             {
                 //<MartItemDetail martItem={items[0]}></MartItemDetail>
                 props.items.map((item) => (
-                    <MartItem martItem={item} key={item._id}></MartItem>
+                    <MartItem martItem={item} key={item._id} onItemClick={props.onItemClick}></MartItem>
                 ))
             }
         </Grid>

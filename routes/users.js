@@ -15,11 +15,12 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/:id', function(req, res, next) {
-  	collection.find({_id:req.params.id}, 
-		function(err,user){
-			if(err) throw err;
-			res.json(user);
-	});
+
+	collection.find({},function(err, users){
+        if(err) throw err;
+		users = users.filter((item) => item._id == req.params.id);
+        res.json(users);
+    })
 });
 
 router.post('/', function(req, res) {
