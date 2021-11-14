@@ -4,16 +4,13 @@ import './Filter.css'
 import { Card, CardContent, Typography, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Slider } from '@material-ui/core'
 
 
-
-function valuetext(value) {
-    return `${value}°C`;
-}
-
-const Filter = () => {
-    const [priceRange, setPriceRangeValue] = React.useState([20, 37]);
-
+const Filter = (props) => {
     const handlePriceRangeChange = (event, newValue) => {
-        setPriceRangeValue(newValue);
+        //setPriceRangeValue(newValue);
+        props.onPriceFilterUpdated(newValue);
+    };
+    const handleDiscountChange = (event, newValue) => {
+        props.onDiscountFilterUpdated(event.target.value);
     };
 
     return (
@@ -36,19 +33,18 @@ const Filter = () => {
                         </Typography>
                         <Slider
                             getAriaLabel={() => 'Price Range'}
-                            value={priceRange}
+                            value={[props.currMin, props.currMax]}
                             onChange={handlePriceRangeChange}
                             valueLabelDisplay="auto"
-                            getAriaValueText={valuetext}
-                            min={0}
-                            max={50}
+                            min={props.minPrice}
+                            max={props.maxPrice}
                         />
                         <div >
                             <Typography sx={{ fontSize: 14 }} color="text.secondary">
-                                Min: {priceRange[0]}
+                                Min: ${props.currMin}
                             </Typography>
                             <Typography sx={{ fontSize: 14 }} color="text.secondary">
-                                Max: {priceRange[1]}
+                                Max: ${props.currMax}
                             </Typography>
                         </div>
                         </CardContent>
@@ -64,7 +60,8 @@ const Filter = () => {
                             <RadioGroup
                                 aria-label="discount"
                                 defaultValue="10"
-                                name="radio-buttons-group">
+                                name="radio-buttons-group"
+                                onChange={handleDiscountChange}>
                                 <FormControlLabel value="10" control={<Radio />} label="> 10%" />
                                 <FormControlLabel value="25" control={<Radio />} label="> 25%" />
                                 <FormControlLabel value="50" control={<Radio />} label="> 50%" />
