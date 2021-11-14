@@ -14,7 +14,7 @@ function App(){
 
    useEffect(() => {
     
-    fetch('/users').then(resp => {
+    fetch('/api/users').then(resp => {
         return resp.json();
     }).then(data => {
         console.log(data);

@@ -62,6 +62,7 @@ const Filter = (props) => {
                                 defaultValue="10"
                                 name="radio-buttons-group"
                                 onChange={handleDiscountChange}>
+                                <FormControlLabel value="0" control={<Radio />} label="No filter" />
                                 <FormControlLabel value="10" control={<Radio />} label="> 10%" />
                                 <FormControlLabel value="25" control={<Radio />} label="> 25%" />
                                 <FormControlLabel value="50" control={<Radio />} label="> 50%" />

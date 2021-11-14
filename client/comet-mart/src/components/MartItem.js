@@ -5,21 +5,22 @@ import { StrikethroughS } from '@material-ui/icons'
 
 
 const MartItem = (props) => {
+    const discount = Math.round(((props.martItem.msp - props.martItem.sellprice) / props.martItem.msp) * 100)
     return (
         <Grid item xs={3}> 
             <Box m={3}>
                 <Grid item>
-                    <img src={'./images/'+props.martItem.image} class="img img-fluid"></img>
+                    <img src={'./images/'+props.martItem.media.images[0]} class="img img-fluid"></img>
                 </Grid>
                 <Grid item>
-                    {props.martItem.title}
+                   2 {props.martItem.itemname}
                 </Grid>
                 <Grid item>
-                    Price: ${props.martItem.price}  
-                    <span style={{textDecoration:'line-through', marginLeft:'4px'}}>${props.martItem.price}</span>
+                    Price: ${props.martItem.sellprice}  
+                    <span style={{textDecoration:'line-through', marginLeft:'4px'}}>${props.martItem.msp}</span>
                 </Grid>
                 <Grid item>
-                    Discount: {props.martItem.discount}%
+                    Discount: {discount}%
                 </Grid>
             </Box>
         </Grid>
