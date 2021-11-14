@@ -19,7 +19,7 @@ const MartItem = (props) => {
                     <span style={{textDecoration:'line-through', marginLeft:'4px'}}>${props.martItem.price}</span>
                 </Grid>
                 <Grid item>
-                    
+                    Discount: {props.martItem.discount}%
                 </Grid>
             </Box>
         </Grid>
