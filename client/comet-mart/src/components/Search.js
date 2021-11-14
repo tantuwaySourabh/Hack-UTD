@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React, useEffect, useState} from 'react'
 import {Grid} from '@mui/material'
 
 import SearchResult from './SearchResult'
@@ -6,29 +6,44 @@ import Filter from './Filter'
 import Sort from './Sort'
 
 
-let items = [
-    {title:"Samsung Galaxy 10", price:20, image:"bedframe1.jpg", discount:50},
-    {title:"Sofa", price:20, image:"bedframe1.jpg", discount:20},
-    {title:"Heater", price:20, image:"bedframe1.jpg", discount:20},
-    {title:"King Size Bed", price:50, image:"bedframe1.jpg", discount:20},
-    {title:"King Size Bed", price:40, image:"bedframe1.jpg", discount:70},
-    {title:"King Size Bed", price:70, image:"bedframe1.jpg", discount:30},
-    {title:"King Size Bed", price:10, image:"bedframe1.jpg", discount:40},
-    {title:"King Size Bed", price:30, image:"bedframe1.jpg", discount:60},
-    {title:"King Size Bed", price:90, image:"bedframe1.jpg", discount:20},
-    {title:"King Size Bed", price:100, image:"bedframe1.jpg", discount:10},
-    {title:"King Size Bed", price:200, image:"bedframe1.jpg", discount:30}
-]
+// let items = [
+//     {title:"Samsung Galaxy 10", price:20, image:"bedframe1.jpg", discount:50},
+//     {title:"Sofa", price:20, image:"bedframe1.jpg", discount:20},
+//     {title:"Heater", price:20, image:"bedframe1.jpg", discount:20},
+//     {title:"King Size Bed", price:50, image:"bedframe1.jpg", discount:20},
+//     {title:"King Size Bed", price:40, image:"bedframe1.jpg", discount:70},
+//     {title:"King Size Bed", price:70, image:"bedframe1.jpg", discount:30},
+//     {title:"King Size Bed", price:10, image:"bedframe1.jpg", discount:40},
+//     {title:"King Size Bed", price:30, image:"bedframe1.jpg", discount:60},
+//     {title:"King Size Bed", price:90, image:"bedframe1.jpg", discount:20},
+//     {title:"King Size Bed", price:100, image:"bedframe1.jpg", discount:10},
+//     {title:"King Size Bed", price:200, image:"bedframe1.jpg", discount:30}
+// ]
 
 const Search = () => {
 
-    const [martItems, setMartItems] = useState(items)
+    const [martItems, setMartItems] = useState([])
+    const [items, setItems] = useState([]);
+    const [filteredItems, setFilteredItems] = useState([]);
 
-    const [maxPrice, setMaxPrice] = useState(Math.max.apply(Math, items.map(function(item) { return item.price; })));
-    const [minPrice, setMinPrice] = useState(Math.min.apply(Math, items.map(function(item) { return item.price; })));
-    const [currMin, setCurrMin] = useState(Math.min.apply(Math, items.map(function(item) { return item.price; })))
-    const [currMax, setCurrMax] = useState(Math.max.apply(Math, items.map(function(item) { return item.price; })))
+    const [maxPrice, setMaxPrice] = useState(Math.max.apply(Math, [].map(function(item) { return item.price; })));
+    const [minPrice, setMinPrice] = useState(Math.min.apply(Math, [].map(function(item) { return item.price; })));
+    const [currMin, setCurrMin] = useState(Math.min.apply(Math, [].map(function(item) { return item.price; })))
+    const [currMax, setCurrMax] = useState(Math.max.apply(Math, [].map(function(item) { return item.price; })))
 
+    useEffect(() => {
+        fetch('/api/items').then((resp) => resp.json())
+        .then((data) => {
+            console.log('items',data);
+            resetPriceRange(data);
+            setMartItems(data);
+            setFilteredItems(data);
+            setItems(data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    }, [])
     const onSortChange = (newOption) => {
         console.log("new sort option "+newOption)
         var newItems = [];
@@ -37,13 +52,13 @@ const Search = () => {
                 break;
             case '2':
                 newItems = [...martItems].sort((item1, item2) => {
-                    return item1.price > item2.price ? 1 : -1;
+                    return parseInt(item1.sellprice) >  parseInt(item2.sellprice) ? 1 : -1;
                 });
                 updateItems(newItems);
                 break;
             case '3':
                 newItems = [...martItems].sort((item1, item2) => {
-                    return item1.price > item2.price ? -1 : 1;
+                    return  parseInt(item1.sellprice) >  parseInt(item2.sellprice) ? -1 : 1;
                 });
                 updateItems(newItems);
                 break;
@@ -55,27 +70,31 @@ const Search = () => {
         setCurrMin(newRange[0]);
         setCurrMax(newRange[1]);
         console.log("new price filter ", newRange)
-        let newItems = items.filter((item) => {
-            return item.price >= newRange[0] && item.price <= newRange[1];
+        let newItems = [...filteredItems].filter((item) => {
+            return item.sellprice >= newRange[0] && item.sellprice <= newRange[1];
         });
         updateItems(newItems)
     }
     const onDiscountFilterUpdated = (val) => {
         console.log("new discount filter ", val)
-        let newItems = items.filter((item) => {
-            return item.discount >= val;
+        console.log(items);
+        let newItems = [...items].filter((item) => {
+            const disc = Math.round(((item.msp - item.sellprice) / item.msp) * 100);
+            return disc >= val;
         });
+        console.log(newItems);
         resetPriceRange(newItems);
-        updateItems(newItems)
+        setFilteredItems(newItems);
+        updateItems(newItems);
     }
     const updateItems = (newItems) => {
         setMartItems(newItems);
     }
     const resetPriceRange = (newItems) => {
-        setMaxPrice(Math.max.apply(Math, newItems.map(function(item) { return item.price; })));
-        setMinPrice(Math.min.apply(Math, newItems.map(function(item) { return item.price; })));
-        setCurrMax(Math.max.apply(Math, newItems.map(function(item) { return item.price; })));
-        setCurrMin(Math.min.apply(Math, newItems.map(function(item) { return item.price; })));
+        setMaxPrice(Math.max.apply(Math, newItems.map(function(item) { return item.sellprice; })));
+        setMinPrice(Math.min.apply(Math, newItems.map(function(item) { return item.sellprice; })));
+        setCurrMax(Math.max.apply(Math, newItems.map(function(item) { return item.sellprice; })));
+        setCurrMin(Math.min.apply(Math, newItems.map(function(item) { return item.sellprice; })));
     }
     return (
         <Grid container spacing={2} direction="column">
