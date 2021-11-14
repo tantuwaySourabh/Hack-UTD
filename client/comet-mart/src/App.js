@@ -9,6 +9,8 @@ import Home from './components/Home';
 import Search from './components/Search';
 import AfterLogin from './components/AfterLogin';
 
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+
 function App(){
 
 
@@ -24,9 +26,15 @@ function App(){
 
    }, [])
   return (
+    <Router>
     <div class="App">
-      <Search></Search>
+      <Switch>
+        <Route path='/search'>
+          <Search></Search>
+        </Route>
+      </Switch>
     </div>
+    </Router>
   );
 
 
