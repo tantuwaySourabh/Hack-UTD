@@ -10,7 +10,6 @@ import Search from './components/Search';
 import AfterLogin from './components/AfterLogin';
 import Sellitem from './components/Sellitem';
 
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import MartItemDetail from './components/MartItemDetail';
 
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
