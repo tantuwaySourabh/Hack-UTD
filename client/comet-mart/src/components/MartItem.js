@@ -6,11 +6,17 @@ import { StrikethroughS } from '@material-ui/icons'
 
 const MartItem = (props) => {
     const discount = Math.round(((props.martItem.msp - props.martItem.sellprice) / props.martItem.msp) * 100)
+    
+    const onItemClick = (item) => {
+        console.log('image clicked', props.martItem);
+        props.onItemClick(props.martItem)
+    }
+    
     return (
         <Grid item xs={3}> 
             <Box m={3}>
                 <Grid item>
-                    <img src={'./images/'+props.martItem.media.images[0]} class="img img-fluid"></img>
+                    <img onClick={onItemClick} src={'./images/'+props.martItem.media.images[0]} class="img img-fluid"></img>
                 </Grid>
                 <Grid item>
                    2 {props.martItem.itemname}

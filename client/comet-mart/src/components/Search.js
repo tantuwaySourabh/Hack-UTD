@@ -1,9 +1,12 @@
 import {React, useEffect, useState} from 'react'
 import {Grid} from '@mui/material'
+import { useHistory } from "react-router-dom";
 
 import SearchResult from './SearchResult'
 import Filter from './Filter'
 import Sort from './Sort'
+import {Link} from 'react-router-dom';
+import MartItemDetail from './MartItemDetail'
 
 
 // let items = [
@@ -21,7 +24,7 @@ import Sort from './Sort'
 // ]
 
 const Search = () => {
-
+    const history =  useHistory();
     const [martItems, setMartItems] = useState([])
     const [items, setItems] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]);
@@ -44,6 +47,9 @@ const Search = () => {
             console.log(err);
         })
     }, [])
+    const onItemClick = (item) => {
+        history.push("/martitemdetail?id="+ item._id);
+    }
     const onSortChange = (newOption) => {
         console.log("new sort option "+newOption)
         var newItems = [];
@@ -96,6 +102,9 @@ const Search = () => {
         setCurrMax(Math.max.apply(Math, newItems.map(function(item) { return item.sellprice; })));
         setCurrMin(Math.min.apply(Math, newItems.map(function(item) { return item.sellprice; })));
     }
+    const onSellItem = () => {
+        history.push('/sellitem');
+    }
     return (
         <Grid container spacing={2} direction="column">
             <Grid item container xs={12} justifyContent="end">
@@ -105,7 +114,7 @@ const Search = () => {
                 <Grid item xs={3}><Filter onPriceFilterUpdated={onPriceFilterUpdated} 
                 onDiscountFilterUpdated={onDiscountFilterUpdated}
                 maxPrice={maxPrice} minPrice={minPrice} currMin={currMin} currMax={currMax}></Filter></Grid>
-                <Grid item xs={9}><SearchResult items={martItems} ></SearchResult></Grid>
+                <Grid item xs={9}><SearchResult items={martItems} onItemClick={onItemClick} ></SearchResult></Grid>
             </Grid>
         </Grid>
     )

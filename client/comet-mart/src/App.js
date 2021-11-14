@@ -8,8 +8,10 @@ import PropTypes from 'prop-types';
 import Home from './components/Home';
 import Search from './components/Search';
 import AfterLogin from './components/AfterLogin';
+import Sellitem from './components/Sellitem';
 
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import MartItemDetail from './components/MartItemDetail';
 
 function App(){
 
@@ -32,6 +34,8 @@ function App(){
         <Route path='/search'>
           <Search></Search>
         </Route>
+        <Route path='/sellitem'><Sellitem></Sellitem></Route>
+        <Route path='/martitemdetail'><MartItemDetail></MartItemDetail></Route>
       </Switch>
     </div>
     </Router>
