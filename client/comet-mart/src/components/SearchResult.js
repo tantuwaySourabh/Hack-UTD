@@ -31,7 +31,7 @@ let items = [
                 
             ]
         },
-        "status" : "unsold"
+        "status" : "unsold",title:"Sofa", price:"20", image:"bedframe1.jpg"
     },
     {title:"Sofa", price:"20", image:"bedframe1.jpg"},
     {title:"Heater", price:"20", image:"bedframe1.jpg"},
@@ -48,10 +48,10 @@ const SearchResult = (props) => {
     return (
         <Grid container>
             {
-                <MartItemDetail martItem={items[0]}></MartItemDetail>
-                // items.map((item) => (
-                //     <MartItem martItem={item}></MartItem>
-                // ))
+                //<MartItemDetail martItem={items[0]}></MartItemDetail>
+                props.items.map((item) => (
+                    <MartItem martItem={item}></MartItem>
+                ))
             }
         </Grid>
     )
