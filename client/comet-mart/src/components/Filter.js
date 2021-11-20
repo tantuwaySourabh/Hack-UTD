@@ -20,7 +20,7 @@ const Filter = (props) => {
                     <Card>
                         <CardContent>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                            Filters
+                            <b>Filters</b>
                         </Typography>
                         </CardContent>
                     </Card>
@@ -29,7 +29,7 @@ const Filter = (props) => {
                     <Card>
                         <CardContent>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                            Price
+                            <b>Price</b>
                         </Typography>
                         <Slider
                             getAriaLabel={() => 'Price Range'}
@@ -54,7 +54,7 @@ const Filter = (props) => {
                     <Card>
                         <CardContent>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                            Discount
+                            <b>Discount</b>
                         </Typography>
                         <FormControl component="fieldset">
                             <RadioGroup
