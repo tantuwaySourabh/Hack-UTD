@@ -1,0 +1,421 @@
+/* 1 */
+{
+    "_id" : "1",
+    "itemname" : "Gaming Chair",
+    "description" : "rolling chair suited for gamin envignments",
+    "category" : [ 
+        "furniture"
+    ],
+    "msp" : "100",
+    "sellprice" : "50",
+    "isnegotiable" : "true",
+    "pickuplocation" : "800 W Campbell Rd, UTD",
+    "buydate" : "10/29/2020",
+    "postdate" : "2/10/2021",
+    "condition" : "new",
+    "availabilitytill" : "3/01/2021",
+    "media" : {
+        "images" : [ 
+            "chair1.jpg", 
+            "chair2.jpg", 
+            "chair3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 51,
+    "status" : "sold"
+}
+
+/* 2 */
+{
+    "_id" : "2",
+    "itemname" : "Twin Bed Frame",
+    "description" : "Good condition Frames, Used one year",
+    "category" : [ 
+        "furniture"
+    ],
+    "msp" : "60",
+    "sellprice" : "40",
+    "isnegotiable" : "false",
+    "pickuplocation" : "625 W Lookout Dr, Richardson, TX 75080",
+    "buydate" : "11/02/2020",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "12/01/2021",
+    "media" : {
+        "images" : [ 
+            "bedframe1.jpg", 
+            "bedframe2.jpg", 
+            "bedframe3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 52,
+    "status" : "unsold"
+}
+
+/* 3 */
+{
+    "_id" : "3",
+    "itemname" : "Dell Computer Windows 11 PRO w/24 inch Dell Monitor WIFI",
+    "description" : "Excellent condition no issues. Restored to factory settings ready to use. Try before you buy. No trades cash only no electronic payments you pick up no deliveries",
+    "category" : [ 
+        "electronics"
+    ],
+    "msp" : "400",
+    "sellprice" : "360",
+    "isnegotiable" : "true",
+    "pickuplocation" : "3000 Northside Blvd, Richardson, TX 75080",
+    "buydate" : "10/02/2020",
+    "postdate" : "10/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "desktop1.jpg", 
+            "desktop2.jpg", 
+            "desktop3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 51,
+    "status" : "unsold"
+}
+
+/* 4 */
+{
+    "_id" : "4",
+    "itemname" : "2019 Tesla Model 3",
+    "description" : "15 Speakers, 4-Wheel Disc Brakes, ABS brakes, Air Conditioning, Auto High-beam Headlights, Automatic temperature control, Brake assist, Delay-off headlights, Dual front impact airbags, Dual front side impact airbags, Electronic Stability Control, Exterior Parking Camera Rear, Four wheel independent suspension, Front anti-roll bar, Front dual zone A/C, Front fog lights, Fully automatic headlights, Knee airbag, Low tire pressure warning, Memory seat, Navigation System, Occupant sensing airbag, Overhead airbag, Power driver seat, Power steering, Power windows, Premium Audio System, Radio data system, Rear window defroster, Remote keyless entry, Security system, Speed control, Speed-sensing steering, Steering wheel memory, Steering wheel mounted A/C controls, Steering wheel mounted audio controls, Traction control.Clean CARFAX.CARFAX One-Owner.Odometer is 19312 miles below market average! Priced below KBB Fair Purchase Price!Ask us about our Very Low Cost Pre-Paid Maintenance Plans. Enjoy the comfort of our State of the Art indoor showroom. Browse our inventory in comfort weather its rain shine.",
+    "category" : [ 
+        "automobile"
+    ],
+    "msp" : "57961",
+    "sellprice" : "53961",
+    "isnegotiable" : "false",
+    "pickuplocation" : "8023 Copper Way, Dallas, TX 75252",
+    "buydate" : "11/02/2019",
+    "postdate" : "11/02/2021",
+    "condition" : "excellent",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "tesla1.jpg", 
+            "tesla2.jpg", 
+            "tesla3.jpg", 
+            "tesla3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 54,
+    "status" : "unsold"
+}
+
+/* 5 */
+{
+    "_id" : "5",
+    "itemname" : "IPhone 12 Pro Max",
+    "description" : "It’s working perfectly in good condition. text me on my cellphone number with a screenshot of this item",
+    "category" : [ 
+        "electronics"
+    ],
+    "msp" : "400",
+    "sellprice" : "105",
+    "isnegotiable" : "true",
+    "pickuplocation" : "8023 Copper Way, Dallas, TX 75252",
+    "buydate" : "10/02/2020",
+    "postdate" : "10/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "iphone1.jpg", 
+            "iphone2.jpg", 
+            "iphone3.jpg", 
+            "iphone4.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 55,
+    "status" : "unsold"
+}
+
+/* 6 */
+{
+    "_id" : "6",
+    "itemname" : "Polo Men’s Burgundy Padded Vest",
+    "description" : "Polo Men’s Medium Burgundy Padded Vest. Water Proof, and is a zipper up and has buttons. Has two buttoned pockets on the side and has a blue and white checkered interior",
+    "category" : [ 
+        "clothing"
+    ],
+    "msp" : "90",
+    "sellprice" : "60",
+    "isnegotiable" : "false",
+    "pickuplocation" : "7624 Pennyburn Dr, Dallas, TX 75248",
+    "buydate" : "10/02/2018",
+    "postdate" : "10/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "jacket1.jpg", 
+            "jacket2.jpg", 
+            "jacket3.jpg", 
+            "jacket4.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 56,
+    "status" : "unsold"
+}
+
+/* 7 */
+{
+    "_id" : "7",
+    "itemname" : "11.89 in. Chrome Mini Basic Table Lamp with Red Fabric Shade",
+    "description" : "Perfect for living room, bedroom, office, kids room, or college dorm, Height: 11.89 in. shade diameter: 5.51 in. Uses 1 x 40-Watt type B E12 candelabra base bulb (not included), On/off switch on cord for convenience",
+    "category" : [ 
+        "home decor"
+    ],
+    "msp" : "30",
+    "sellprice" : "15",
+    "isnegotiable" : "false",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "10/02/2018",
+    "postdate" : "10/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "lamp1.jpg", 
+            "lamp2.jpg", 
+            "lamp3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 57,
+    "status" : "unsold"
+}
+
+/* 8 */
+{
+    "_id" : "9",
+    "itemname" : "2018 Honda Accord",
+    "description" : "Very nice and in good condition.runs perfectly fine with no issues",
+    "category" : [ 
+        "automobile"
+    ],
+    "msp" : "5500",
+    "sellprice" : "4500",
+    "isnegotiable" : "true",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "11/02/2018",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "honda1.jpg", 
+            "honda2.jpg", 
+            "honda3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 59,
+    "status" : "sold"
+}
+
+/* 9 */
+{
+    "_id" : "10",
+    "itemname" : "2006 Honda Accord",
+    "description" : "Very nice and in good condition.runs perfectly fine with no issues",
+    "category" : [ 
+        "automobile"
+    ],
+    "msp" : "1000",
+    "sellprice" : "600",
+    "isnegotiable" : "true",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "11/02/2014",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "honda_cheap1.jpg", 
+            "honda_cheap2.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 51,
+    "status" : "unsold"
+}
+
+/* 10 */
+{
+    "_id" : "11",
+    "itemname" : "Boosted Board (electric Skateboard)",
+    "description" : "It has an extended range battery, it’ll come in very good condition, I don’t have the pink wheels anymore but I do have the grey wheels it came with, I only used it for college. I paid 1000 for the custom from backfire. 281 miles",
+    "category" : [ 
+        "sports"
+    ],
+    "msp" : "750",
+    "sellprice" : "700",
+    "isnegotiable" : "true",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "11/02/2020",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "skate1.jpg", 
+            "skate2.jpg", 
+            "skate3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 51,
+    "status" : "unsold"
+}
+
+/* 11 */
+{
+    "_id" : "12",
+    "itemname" : "Kitchen aid stand mixed with attachments",
+    "description" : "Kitchen aid stand mixed with attachments",
+    "category" : [ 
+        "kitchen"
+    ],
+    "msp" : "500",
+    "sellprice" : "375",
+    "isnegotiable" : "true",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "11/02/2020",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "mixer1.jpg", 
+            "mixer2.jpg", 
+            "mixer3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 52,
+    "status" : "unsold"
+}
+
+/* 12 */
+{
+    "_id" : "13",
+    "itemname" : "Razer Iskur Gaming Chair",
+    "description" : "Chair comes with everything, I tried disassembling the chair but I scratched a plastic part of the chair. I like the chair but I am a little too short for it, lol. Paid $500 for it but give me your best offer.",
+    "category" : [ 
+        "furniture"
+    ],
+    "msp" : "400",
+    "sellprice" : "380",
+    "isnegotiable" : "true",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "11/02/2020",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "chairgreen1.jpg", 
+            "chairgreen2.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 53,
+    "status" : "unsold"
+}
+
+/* 13 */
+{
+    "_id" : "14",
+    "itemname" : "Razer Iskur Gaming Chair",
+    "description" : "Chair comes with everything, I tried disassembling the chair but I scratched a plastic part of the chair. I like the chair but I am a little too short for it, lol. Paid $500 for it but give me your best offer.",
+    "category" : [ 
+        "furniture"
+    ],
+    "msp" : "400",
+    "sellprice" : "380",
+    "isnegotiable" : "true",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "11/02/2020",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "chairblue1.jpg", 
+            "chairblue2.jpg", 
+            "chairblue3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 54,
+    "status" : "unsold"
+}
+
+/* 14 */
+{
+    "_id" : "15",
+    "itemname" : "2018 Nissan Altima",
+    "description" : "Everything On The Car Works Good!. air Conditioning. New Power Steering Pump. Tinted Windows. Normal Maintenance On Car",
+    "category" : [ 
+        "automobile"
+    ],
+    "msp" : "20000",
+    "sellprice" : "10000",
+    "isnegotiable" : "true",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "11/02/2020",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "nissan1.jpg", 
+            "nissan2.jpg", 
+            "nissan3.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 55,
+    "status" : "unsold"
+}
+
+/* 15 */
+{
+    "_id" : "16",
+    "itemname" : "2007 Nissan Altima",
+    "description" : "Everything On The Car Works Good!. air Conditioning. New Power Steering Pump. Tinted Windows. Normal Maintenance On Car",
+    "category" : [ 
+        "automobile"
+    ],
+    "msp" : "6577",
+    "sellprice" : "4500",
+    "isnegotiable" : "true",
+    "pickuplocation" : "913 Wisteria Way, Richardson, TX 75080",
+    "buydate" : "11/02/2012",
+    "postdate" : "11/02/2021",
+    "condition" : "new",
+    "availabilitytill" : "11/28/2021",
+    "media" : {
+        "images" : [ 
+            "nissanred1.jpg", 
+            "nissanred2.jpg", 
+            "nissanred3.jpg", 
+            "nissanred4.jpg"
+        ],
+        "videos" : []
+    },
+    "userId" : 56,
+    "status" : "unsold"
+}
