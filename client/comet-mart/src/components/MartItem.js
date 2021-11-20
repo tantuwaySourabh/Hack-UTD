@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Grid, Box } from '@material-ui/core'
 import { StrikethroughS } from '@material-ui/icons'
+import { green } from '@material-ui/core/colors'
 
 
 const MartItem = (props) => {
@@ -19,14 +20,14 @@ const MartItem = (props) => {
                     <img onClick={onItemClick} src={'./images/'+props.martItem.media.images[0]} class="img img-fluid"></img>
                 </Grid>
                 <Grid item>
-                   2 {props.martItem.itemname}
+                    <b>{props.martItem.itemname}</b>
                 </Grid>
                 <Grid item>
                     Price: ${props.martItem.sellprice}  
                     <span style={{textDecoration:'line-through', marginLeft:'4px'}}>${props.martItem.msp}</span>
                 </Grid>
                 <Grid item>
-                    Discount: {discount}%
+                    <div style={{color:"#006600"}}><b>Discount: {discount}%</b></div> 
                 </Grid>
             </Box>
         </Grid>

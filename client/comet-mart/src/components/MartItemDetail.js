@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
+import './MartItemDetail.css'
 
 const MartItemDetail = (props) => {
 
@@ -64,22 +65,27 @@ const MartItemDetail = (props) => {
                             </div>
                         </div>
                     </div>
-                    <h3>Description:</h3>  
-                    <p>{martItem.description}</p>     
+                    <div class="col-md-8">
+                        <h5 className="mt-3">Description:</h5>  
+                        <p>{martItem.description}</p>    
+                    </div>
+                     
                 </div>
                 ))
             }
-            {
-                seller.map((item) => (
-                    <div>
-                        <div>Seller: {item.username}</div>
-                        <div> Seller Address: {item.address}</div>
-                        <div> Seller Contact: {item.contactno}</div>
-
-
-                    </div>
-                ))
-            }
+            <div class="col-md-8 seller">
+                {
+                    
+                    seller.map((item) => (
+                        <div className="mt-3">
+                            <div><b>Seller: {item.username}</b></div>
+                            <div> Seller Address: {item.address}</div>
+                            <div> Seller Contact: {item.contactno}</div>
+                        </div>
+                    ))
+                }
+            </div>
+            
             
             
         </div>

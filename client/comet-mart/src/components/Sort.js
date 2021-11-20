@@ -13,10 +13,10 @@ const Sort = (props) => {
     };
 
     return (
-        <div style={{margin:'20px'}}>
-            <form>
-                <label for="sortBy">Sort By:    </label>
-                <select name="sortBy" id="sortBy" style={{width:'150px'}} value={sortBy} onChange={handleChange}>
+        <div className="mt-1">
+            <form class="form-control">
+                <label for="sortBy" class="mr-3"><b>Sort By:</b></label>
+                <select class="" name="sortBy" id="sortBy" style={{width:'150px'}} value={sortBy} onChange={handleChange}>
                     <option value="1">Popularity</option>
                     <option value="2">Price: Low to High</option>
                     <option value="3">Price: High to Low</option>
